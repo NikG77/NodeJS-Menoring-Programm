@@ -13,7 +13,9 @@
     "tsc-check": "tsc --noEmit",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "task1": "nodemon --watch src/task1_1.ts --exec \\\"ts-node\\\" src/task1_1.ts",
+    "task2": "nodemon src/task1_2.ts --exec \\\"ts-node\\\" src/task1_2.ts"
   },
   "repository": {
     "type": "git",
@@ -95,5 +97,8 @@
     "*.ts": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
   }
 }
