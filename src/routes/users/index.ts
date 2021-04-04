@@ -28,7 +28,6 @@ router.post('/create', async (req: Request, res: Response) => {
   const body = req.body;
 
   if (patchUserValidate(req.body)) {
-
     const userExists = await Promise.resolve(
       usersData.find((user) => user.login === req.body.login),
     ).then((user) => !!user);
@@ -41,7 +40,6 @@ router.post('/create', async (req: Request, res: Response) => {
       });
       return;
     }
-
 
     const user: User = {
       id: faker.random.uuid(),
@@ -79,9 +77,7 @@ router.put('/:id', async (req: Request, res: Response) => {
   if (user) {
     if (patchUserValidate(req.body)) {
       const userExists = await Promise.resolve(
-        usersData.find(
-          (user) => user.login === req.body.login && user.id !== id,
-        ),
+        usersData.find((user) => user.login === req.body.login && user.id !== id),
       ).then((user) => !!user);
 
       if (userExists) {
@@ -92,9 +88,6 @@ router.put('/:id', async (req: Request, res: Response) => {
         });
         return;
       }
-
-
-
 
       user.login = login || user.login;
       user.password = password || user.password;
