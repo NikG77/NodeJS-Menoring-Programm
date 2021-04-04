@@ -5,6 +5,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+
   rules: {
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/camelcase': 0,
@@ -12,5 +13,8 @@ module.exports = {
     '@typescript-eslint/array-type': 2,
     '@typescript-eslint/explicit-function-return-type': 1,
     '@typescript-eslint/no-empty-function': 1,
+    "prettier/prettier": ["error", {
+      "endOfLine":"auto"
+    }],
   },
 };
