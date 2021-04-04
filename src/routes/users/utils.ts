@@ -1,4 +1,3 @@
-import * as crypto from 'crypto';
 import * as faker from 'faker';
 
 import { User } from './user.types';

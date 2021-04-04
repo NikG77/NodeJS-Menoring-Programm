@@ -1,10 +1,10 @@
-import { JSONSchemaType } from 'ajv';
-import { User } from '../user.types';
-
 export const patchUserSchema = {
   type: 'object',
   properties: {
-    login: { type: 'string' },
+    login: { type: 'string',
+    minLength: 2,
+    pattern: '^(?=.*[a-zA-Z])(?=.*[0-9])',
+   },
     password: {
       type: 'string',
       minLength: 8,
