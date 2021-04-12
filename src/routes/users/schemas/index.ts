@@ -1,10 +1,7 @@
 export const patchUserSchema = {
   type: 'object',
   properties: {
-    login: { type: 'string',
-    minLength: 2,
-    pattern: '^(?=.*[a-zA-Z])(?=.*[0-9])',
-   },
+    login: { type: 'string' },
     password: {
       type: 'string',
       minLength: 8,
