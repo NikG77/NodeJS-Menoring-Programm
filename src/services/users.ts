@@ -3,7 +3,7 @@ import { User as UserModel } from '../models/users';
 import { User as UserType } from '../types/user';
 
 class UsersService {
-  async getAll({ limit = '10', substring = '' }): Promise<Array<UserType>> {
+  async getAll({ limit = '10', substring = '' }): Promise<UserType[]> {
     return await UserModel.findAll({
       order: [['login', 'ASC']],
       limit: Number(limit),

@@ -13,6 +13,6 @@ router.post('/users', validateSchema(userSchema), users.create);
 
 router.patch('/users/:id', validateSchema(userSchema), users.update);
 
-router.delete('/users/:id',  users.delete);
+router.delete('/users/:id', users.delete);
 
 export default router;
